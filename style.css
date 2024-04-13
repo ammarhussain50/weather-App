@@ -1,0 +1,300 @@
+body{
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:hsl(0, 0%, 95%);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+.weatherapp{
+      margin-top: 6px;
+      margin-bottom: 15px;
+}
+.typecity{
+      padding: 10px;
+      font-size: 2rem;
+      font-weight: bold;
+      border: 2px solid rgb(154, 152, 152);
+      border-radius: 10px;
+      margin-right: 20px;
+      margin-top: -1px;
+      width: 350px;
+      box-shadow: 3px 3px 8px rgb(62, 60, 60);
+}
+.typecity:focus {
+      border-color: rgb(34, 34, 137); /* Change to the desired border color */
+      outline: none; /* Optional: remove the default focus outline */
+    }
+button[type='submit']{
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 1.7rem;
+      background-color:rgb(9, 113, 211);
+      color: white;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      box-shadow: 7px 8px 10px rgb(62, 60, 60);
+      margin-top: 10px;
+}
+button[type='submit']:hover {
+      background-color:rgb(5, 69, 180);
+}
+.card{
+      background: linear-gradient(180deg,rgb(9, 152, 950),rgb(241, 199, 32));
+      /* padding: 40px; */
+      padding-top: 22px; ;
+      box-shadow: 3px 3px 8px rgb(62, 60, 60);
+      min-width: 290px;
+      width: 20rem;
+      height: 30rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10px;
+      overflow: hidden;
+      height: auto; /* Adjust height to fit content */
+            /* max-height: 100%; Limit height to prevent overflow */
+}
+h1{
+      font-size: 3.4rem;
+      margin-top: 0;
+      margin-bottom: 17px;
+}
+p{
+      font-size: 1.4rem;
+      margin: 3px 0;
+}
+.citydisplay,.tempdisplay{
+      font-size: 3.6rem;
+      font-weight: bold;
+      color: rgb(48, 47, 47);
+      margin-bottom: 22px;
+      margin-top: 0;
+}
+.humidity{
+      font-weight: bold;
+      margin-bottom: 22px;
+}
+.descdisplay{
+      font-style: italic;
+      font-weight: bold;
+      font-size: 2rem;
+}
+.weatheremoji{
+      margin: 0;
+      font-size: 7rem;
+      margin-bottom: 0;
+}
+.errordisplay{
+      font-size: 2rem;
+      font-weight: bold;
+      color: rgb(40, 39, 39);
+      padding: 21px;
+}
+
+
+@media (max-width: 767px) {
+      .weatherapp {
+        width: 100%;
+      }
+      .typecity {
+            width: 90%;
+            /* max-height: 500px; */
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+          }
+      .card{
+        /* height: 1rem; */
+        max-height: 28rem;
+        height: auto; /* Adjust height to fit content */
+            /* max-height: 100%; Limit height to prevent overflow */
+      }
+      button[type='submit']{
+        margin-top: 0px;
+        font-size: 1.3rem;
+      }
+      .errordisplay{
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .weatherapp {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+      }
+      .typecity {
+        width: 90%;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+      }
+      /* .card {
+        width: 20rem;
+    
+        height: 27rem;
+      } */
+
+      .card {
+            height: auto; /* Adjust height to fit content */
+            max-height: 100%; /* Limit height to prevent overflow */
+            /* overflow-y: auto; Add vertical scroll if content exceeds height */
+            margin-bottom: 40px;
+            max-height: 28rem;
+          }
+      button[type='submit']{
+        font-size: 1.2rem;
+      }
+      .descdisplay {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    
+      .tempdisplay {
+        font-size: 4rem;
+      }
+      .citydisplay {
+        font-size: 3.5rem;
+      }
+      .humidity {
+        font-size: 1.3rem;
+      }
+      .errordisplay {
+        width: 20rem;
+        font-size: 1.4rem;
+        justify-content: center;
+      }
+    }
+
+@media (max-width : 431px) {
+      .card {
+            max-width: 430px; /* Set max-width to 425px */
+            width: 19rem; /* Adjust width to 15rem */
+            height: 21rem; /* Adjust height to 25rem */
+            height: auto; /* Adjust height to fit content */
+            max-height: 27rem;
+          }
+     button[type='submit']{
+      font-size: 1rem;
+          }
+
+          .weatherapp {
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+          }
+          .typecity {
+            width: 90%;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+          }
+
+          .descdisplay {
+            font-size:  1.8rem;
+            font-weight: bold;
+          }
+        
+          .tempdisplay {
+            font-size: 3.4rem;
+          }
+          .citydisplay {
+            font-size: 3.2rem;
+          }
+          .humidity {
+            font-size: 1.4rem;
+          }
+          .errordisplay {
+            width: 18rem;
+            font-size: 1.1rem;
+            justify-content: center;
+          }
+}
+@media (max-width:360px) {
+      .card {
+            max-width: 370px; /* Set max-width to 425px */
+            width: 17rem; /* Adjust width to 15rem */
+            height: 20rem; /* Adjust height to 25rem */
+            height: auto; /* Adjust height to fit content */
+            max-height: 27.5rem;
+          }
+     button[type='submit']{
+      font-size: 0.9rem;
+          }
+
+          .weatherapp {
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+          }
+          .typecity {
+            width: 90%;
+            margin-bottom: 15px;
+            font-size: 1rem;
+          }
+
+          .descdisplay {
+            font-size:  1.6rem;
+            font-weight: bold;
+          }
+        
+          .tempdisplay {
+            font-size: 3.2rem;
+          }
+          .citydisplay {
+            font-size: 3.2rem;
+          }
+          .humidity {
+            font-size: 1.3rem;
+          }
+          .errordisplay {
+            width: 17rem;
+            font-size: 1.4rem;
+            justify-content: center;
+          }
+}
+
+
+@media (max-width:315px) {
+      .card {
+            max-width: 320px; /* Set max-width to 425px */
+            width: 17rem; /* Adjust width to 15rem */
+            height: 19rem; /* Adjust height to 25rem */
+            height: auto; /* Adjust height to fit content */
+          }
+      button[type='submit']{
+        font-size: 0.8rem;
+          }
+
+          .weatherapp {
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+          }
+          .typecity {
+            width: 90%;
+            margin-bottom: 15px;
+            font: size 1rem ;
+          }
+
+          .descdisplay {
+            font-size:  1.6rem;
+            font-weight: bold;
+          }
+        
+          .tempdisplay {
+            font-size: 3.4rem;
+          }
+          .citydisplay {
+            font-size: 3.2rem;
+          }
+          .humidity {
+            font-size: 1.4rem;
+          }
+          .errordisplay {
+            width: 15rem;
+            font-size: 1.3rem;
+            justify-content: center;
+          }
+}
